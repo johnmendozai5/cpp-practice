@@ -61,9 +61,17 @@ int main(){
         }
 
 }
-        
-    tax = round(tax);
+tax = round(tax);
     std::cout << "Federal tax: $" << tax << std::endl;
+
+double tax_due = tax - withheld;
+if(tax_due >= 0){
+    std::cout << "Tax due: $" << tax_due << std::endl;
+} else {
+    std::cout << "Tax refund: $" << -tax_due << std::endl;
+}
+        
+    
 }
 
 }
